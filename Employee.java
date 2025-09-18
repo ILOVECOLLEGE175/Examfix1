@@ -31,31 +31,32 @@ public class Employee{
      */
     public boolean canDrive(){
         int age = calculateAge(2025);
-           if age >= 16
-           print("YES!");
-           
-           else print("you must wait(16-calculateAge)more years to drive");
-        // to be completed
+        if (age >= 16) {
+            System.out.println("yes!!!");
+            return true;
+        }else{
+            System.out.println("you need to wait" + " " + (16 - age)+ " " + "years to drive");
+            return false;
+            
+        }
     }
 
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
-        int pay = (hourlyWage * unpaidHours);
-            netpay = (int pay * 0.70);
-            calculate pay = (netpay);
-        // to be completed
-    
+        double taxes = 0.70;  
+        double netpay = (hourlyWage * unpaidHours ) - taxes;
+        return netpay;
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-return.print("John Deere has recieved a wire transfer of (net pay)");
- set netpay = 0;
- set unpaidHours = 0;
-        // to be completed
+        double netPay = calculatePay();
+        System.out.println (fullname + "" + "has been paid" + " has recieved a wire transfer of" + " " +  netPay );
+        this.unpaidHours = 0.0;
+    
     }
 }
