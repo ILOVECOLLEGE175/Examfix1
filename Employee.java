@@ -31,6 +31,10 @@ public class Employee{
      */
     public boolean canDrive(){
         int age = calculateAge(2025);
+           if age >= 16
+           print("YES!");
+           
+           else print("you must wait(16-calculateAge)more years to drive");
         // to be completed
     }
 
@@ -38,6 +42,9 @@ public class Employee{
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
+        int pay = (hourlyWage * unpaidHours);
+            netpay = (int pay * 0.70);
+            calculate pay = (netpay);
         // to be completed
     
     }
@@ -46,6 +53,9 @@ public class Employee{
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
+return.print("John Deere has recieved a wire transfer of (net pay)");
+ set netpay = 0;
+ set unpaidHours = 0;
         // to be completed
     }
 }
